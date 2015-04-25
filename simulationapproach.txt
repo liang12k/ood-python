@@ -1,0 +1,22 @@
+
+Simulation approach
+===================
+
+problem statement (foundations.txt) lists the overview, goals, context of application
+
+simulation application:
+:goal: programmer experience with different casino game betting strategies
+-simple cmd line simulator (**simplicity**)
+-easily select one of variety of player betting strategies
+-play number of simulated rounds
+-product statistical summary of results of betting strategy
+
+Essential use case
+~~~~~~~~~~~~~~~~~~
+actor: see expected results of particular strategy for particular game
+-specifies game and betting strategy to test
+-game: addt'l params (ie: betting limits)
+-strategy: addt'l params (ie: initial budget/stake)
+
+system: responds with statistical summary of outcomes after fixed number of rounds
+-small number of rounds (reflect few hrs of play)
