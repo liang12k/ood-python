@@ -1,0 +1,27 @@
+
+Methodology, Technique, Process
+===============================
+
+Incremental development:
+~~~~~~~~~~~~~~~~~~~~~~~~
+each chapter is a sprint
+-produces collection of deliverables
+-each part is a complete release
+unit testing
+-test driven development (TDD)
+embedded documentation
+-api documents (ie: Epydoc)
+
+Goal:
+~~~~~
+repeated exposure to transformation of problem statement through design to code
+agile (iterative) methodologies w small deliverables to get feedback, better planning (proj managers)
+waterfall methodology: read overview + design then (final) deliverables for complete design
+
+Topics: (see respect .txt files)
+~~~~~~~
+a. quality
+b. rework
+c. technical decision making
+d. reuse
+e. design patterns

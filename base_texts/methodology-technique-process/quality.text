@@ -1,0 +1,36 @@
+
+Overall Quality Assurance
+=========================
+focus on unit testing, documentation
+
+1. need satisfaction
+   -software meets the need
+   in increments: (Incremental development)
+   a. problem statement
+   b. define use case (defined in goals)
+   c. write software focused on actor's needs
+   
+2. performance
+   extensive unit tests allows implementation altering classes
+   -passing unit test allows further changes for performance optimization
+
+3. maintenance
+   changing software (bugs, requirements, addt'l understanding)
+   :note: inital solution == actor's thinking --> deeper understanding == changes
+   approach:
+   1. pick feature
+   2. add unit tests to indicate/handle bug
+   3. fix classes to pass unit tests
+
+4. adaptation
+   software adapts to environment changes (with documentation)
+   -ie: interfaces, OS, platform, interoperability, portability, scalability (addt'l users)
+   -note: java, python avoids interoperability issues
+
+5. organizational
+   cost of ownership + developers' productivity
+   ideally: developing software incrementally <--> good developer productivity
+
+
+
+
