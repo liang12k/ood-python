@@ -1,0 +1,21 @@
+
+Problem statement
+=================
+-composed of:
+ 1. context (of the problem)
+ 2. problem
+ 3. forces (influence solution choice)
+ 4. solution (balances forces)
+ 5. consequences (of chosen solution)
+-get high-level (business) use case of software implementation (based on problem)
+ :note: use case == actor, system, system-actor value
+
+OOD Steps:
+==========
+:goal: establish areas of responsibility
+:note: methodology provided for some perspective on how to break work into manageable pieces
+1. summarize approach to solution
+2. describe overall strategy to follow
+3. describe technical foundations (of software solution)
+4. specfic/technical considerations that define approach's common aspects
+

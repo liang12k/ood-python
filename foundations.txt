@@ -1,0 +1,36 @@
+
+Problem statement:
+==================
+1. context: (of the problem)
+   casino table games (roulette, craps, blackjack)
+   -explore consequences of various betting strategies for the above games
+   -questions: strategies that work best against rule changes
+
+2. problem:
+   for a given game, what player strategies product best results?
+
+3. forces: (influence solution choice)
+   simple application to build (raw data, statistical summaries; cmd line) > UI
+   -user specified player strategy --> application presents results
+   -application results that are tab-delimited can be pasted into spreadsheet for addt'l analyses
+   -platform + language agnostic (java, python)
+   -balance interesting programming, probability theory, statistics (OOD,OOP > probability theory)
+   -reflect actual game play (# of plays in one siting, amt of $ [betting limits, money mgt])
+   -money management (stop playing)
+   :note: statistical analyses: simulate play sessions w time limit, $ gained, loss
+
+4. solution: (balance forces)
+   address the forces (see high level [business] use case & consequences)
+
+5. consequences: (of chosen solution)
+   build simulator application that supports high level [business] use case
+   -won't address how to analyze results
+   -**build application where new player betting strategies can be inserted
+      :note: not all strategies known in advance - agile approach to design + implementation (rework)
+
+-high level [business] use case: (based on problem; overall view)
+ 1. actor: researches alternative strategies (IDE builds new classes for simulator)
+ 2. IDE: creates new classes for simulator
+ 3. actor: runs simulator with selection of game + strategy
+ 4. simulator: responds with statistical results
+ 5. actor: evaluates,analyzes results (using analysis tools, visualizations)
