@@ -1,14 +1,21 @@
 
 Problem statement
 =================
--composed of:
+composed of:
  1. context (of the problem)
  2. problem
  3. forces (influence solution choice)
  4. solution (balances forces)
  5. consequences (of chosen solution)
--get high-level (business) use case of software implementation (based on problem); overall view/investigation
- :note: use case == actor, system, system-actor value
+ 6. create high-level use case
+
+
+Use Case:
+=========
+high-level (business) use case of software implementation (based on problem); overall view/investigation
+ :note:
+ use case == actor, system, system-actor value
+ (see usecase_base.txt)
 
 OOD Steps:
 ==========
