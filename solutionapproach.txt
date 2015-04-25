@@ -1,0 +1,19 @@
+
+Solution approach:
+==================
+:note: determined by problem & use-case information
+
+general elements
+a. game being simulated:
+   includes various elements of the game
+   -wheel (roulette), dice (craps), cards (blackjack), table, bets
+b. player being simulated
+   includes various decisions player makes, based on:
+   -state of game, various rules of betting system followed
+c. statistics collected
+d. control component
+   -processes game
+   -collect statistics
+   -writes details/final summary
+
+

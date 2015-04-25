@@ -21,6 +21,7 @@ Problem statement:
 
 4. solution: (balance forces)
    address the forces (see high level [business] use case & consequences)
+   (see solutionsapproach.txt)
 
 5. consequences: (of chosen solution)
    build simulator application that supports high level [business] use case
