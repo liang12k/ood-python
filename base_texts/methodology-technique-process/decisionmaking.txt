@@ -1,0 +1,13 @@
+
+Decision-making
+===============
+"looking for the big simple"
+:note: hard to forsee all consequences of design decision
+-find alternatives, pros/cons of each choice
+-good OOD comes from good technical decision-making process
+-more time spent on design --> simplifciation --> reduced development, maintenance costs
+
+example
+~~~~~~~
+falling back to known technology instead of using new technology
+-plan design of pro/con + simplification of task
