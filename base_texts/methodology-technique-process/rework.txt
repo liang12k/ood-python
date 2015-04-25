@@ -1,0 +1,32 @@
+
+Rework
+======
+aka: adaptation, evolution, enhancement, mutation
+:note: essential to incremental learning + requirement changes in design/software
+-'rework is a consequence of learning'
+-project begins with many kinds of ignorance w steps to reduce ignorance
+-project w/o rework is suspiciously under-engineered
+
+Goal
+~~~~
+design with correcting mistake takes minimal fixes in few classes
+
+Consequences of denying degrees of ignorance
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+a. programmers
+   make mistakes to learn effectively - rework solution to improve them
+   avoid designing solution to be complete & perfect on the first go
+   understand the important/prioritized items
+
+b. managers
+   good design takes time & learning good design requires mistakes
+   make budget for mistakes
+   rework bad ideas to make them good + search for simplifications
+
+c. economics
+   resorting to waterfall methodology:
+   -getting complete design before actual development
+   requires understanding problem domain & providing appropriate level of design detail
+
+
+   
