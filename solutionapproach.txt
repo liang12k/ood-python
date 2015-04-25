@@ -16,4 +16,8 @@ d. control component
    -collect statistics
    -writes details/final summary
 
+:note: Model-View-Control (MVC) design pattern
+-model: game, player, statistics
+-view: cmd line selection of player and reporting (UI to display data)
+-control: creates objects to start simulation
 
