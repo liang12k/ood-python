@@ -28,5 +28,10 @@ c. economics
    -getting complete design before actual development
    requires understanding problem domain & providing appropriate level of design detail
 
-
-   
+Accepting rework
+~~~~~~~~~~~~~~~~
+plan workload as: planned cycles of work + rework
+high-level designs miss details of problem domain
+-rework allows full understanding of problem
+-users don't fully understand their problem along
+-developers don't fully understand users
