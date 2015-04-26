@@ -1,0 +1,7 @@
+
+Design patterns
+===============
+Gang of Four (GoF) design patterns
+-creational, structural, behavioral
+:note: common design patterns expands programmer's techniques
+-ref link: http://www.blackwasp.co.uk/GofPatterns.aspx
