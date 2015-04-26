@@ -1,0 +1,16 @@
+
+Deliverables
+============
+three types:
+1. source files
+   the working application program
+   -java: JAR file
+   -python: .py files; opt'l - disutils, setuptools, .egg
+
+2. unit tests
+   -java: JUnit
+   -python: unittest, doctest
+
+3. documentations (paperwork)
+   -java: javadoc
+   -python: Epydoc, sphinx
