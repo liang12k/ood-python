@@ -1,0 +1,25 @@
+
+Roulette:
+=========
+http://buildingskills.itmaybeahack.com/book/oodesign-python-2.2/html/roulette/details.html
+
+:note: American version (European version is different)
+
+wheel: with 38 numbered bins [0,00,1-36]
+table: spaces for bets
+bets: 38 numbers (and addt'l options)
+
+game begins: ball put into spinning roulette wheel, number landed on is winner
+-win: same number, related wins; paid off using odds
+-lose: bets collected
+
+numbers: 1-36 colored in red, black; 0,00 in green
+-red,black in arbitrary patterns and various ranges
+-0,00 neither even or odd
+-geometry of betting locations on table defines relationships between number bets
+
+Bets available
+~~~~~~~~~~~~~~
+each bet has a payout: n:1 (n = multiplier defining the amound won based on bet amount)
+-ex: 2:1 on $5 bet == $10 win; $15 sitting on table ($5 original bet & $10 addt'l winnings)
+
