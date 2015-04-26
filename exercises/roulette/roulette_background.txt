@@ -23,3 +23,27 @@ Bets available
 each bet has a payout: n:1 (n = multiplier defining the amound won based on bet amount)
 -ex: 2:1 on $5 bet == $10 win; $15 sitting on table ($5 original bet & $10 addt'l winnings)
 
+Bet types
++++++++++
+inside: 38 numbers & small group of numbers (high odds)
+outside: large group of numbers (low odds)
+
+inside
+******
+a. straight: bet on single number (35:1)
+b. split: bet on adjacent pair of numbers in row/col (17:1); 114 split combinations
+c. street: three numbers in a single row (11:1); 12 rows == 12 street bets
+d. corner: square of four numbers (8:1); 22 available
+e. line: six number block, two adjacent street bets (5:1); 11 combinations
+         -note: top two street rows are 0,00,1,2,3 (6:1)
+
+outside
+*******
+-involes a group of 12-18 related numbers, exluding 0,00 (either straight or street bet)
+a. any three 12-number ranges 1-12, 13-25, 25-36 (2:1)
+b. three 12-number cols (2:1) odds; note all numbers in col divided by 3 has remainder value reflecting col #
+c. even: red/black or two 18-number ranges 1-18 = low, 19-36 = high (1:1)
+
+Odds and payouts
+~~~~~~~~~~~~~~~~
+
