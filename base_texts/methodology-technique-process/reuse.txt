@@ -1,0 +1,30 @@
+
+Reuse
+=====
+constructing general framework (not appropriate for beginner OOD)
+-overall generalization, design
+
+Steps
+~~~~~
+OOD two reuse areas: (beyond this may create cost > value)
+a. reusing class specification to create objects with common structure, behavior
+   isolating responsibilities to create classes of objects
+   -objects having common structure and behavior
+
+   >emergent behavior (property):
+    objects cooperate to achieve desired results
+    -combination of objs - no single class contains overall functionality
+
+   >inversion of control (IoC):
+    "don't call me, I'll call you"; 'plug-in' concept
+    removes dependencies from code
+    -classA in classB is tightly coupled, classB explicitly handling classA instance
+     classB instead takes classA instance to work on (Dependancy Injection [DI]?)
+     **better that both depend on abstraction or interface
+    :note: without IoC, there's tight coupling (maintenance difficulty, costs...)
+    -ref: https://www.youtube.com/watch?v=zmdWWujU8M4
+
+b. using inheritance to reuse structure, behavior among multiple classes of objects
+   subclass-superclass relationship (class hierarchy)
+   :note: larger-scope reuse of sharing classes - different projects have different views
+   	  (ie: product - business (sales, marketing) vs internal (costs, legal)
