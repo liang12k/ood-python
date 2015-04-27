@@ -38,3 +38,52 @@ summarize classes and responsbilities identified from problem statement
 
 'uses-used by' collaborative relationships
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+outcome:
+-responsibilities:
+ name for bet and payout odds, isolates calculation of payout amount
+ ex: 'Red','1:1'
+-collaborators
+ collected by 'wheel' into bins reflecting bets that win
+ collected by 'table' into available bets for 'player'
+ used by 'game' to compute amount won from bet amount
+
+wheel:
+-responsibilities
+ selects 'outcome'-s that win; isolates use of rand number generator to select 'outcome'
+ encapsulates set of winning 'outcome'-s associated w each individual number on 'wheel'
+ ex: '1' bin has winning 'outcome'-s: '1','red','odd','low','column1','dozen1-12','split1-2'
+				      'split1-4','street1-2-3','corner1-2-4-5','five-bet',
+				      'line1-2-3-4-5-6','00-0-1-2-3','dozen1'
+-collaborators
+ collect 'outcome'-s into bins; used by overall 'game' to get next set of winning 'outcomes'
+
+table:
+-responsbilities
+ collection of 'bet'-s placed on 'outcome'-s by 'player'
+ isolates set of possible 'bet'-s and mgt of amounts current at risk on each 'bet'
+ serves as interface between 'player' and other 'game' elements
+-collaborators
+ collects 'outcome'-s
+ used by 'player' to place 'bet' amount on specific 'outcome'
+ used by 'game' to compute amount won from amount that was 'bet'
+
+player: (**important: encapsulation - updates algorithms used, different bets)
+-responsbilities
+ places 'bet'-s on 'outcome'-s
+ updates stake with amounts won,lost
+-collaborators
+ uses 'table' to place 'bet'-s on 'outcome'-s
+ used by 'game' to record wins,losses
+
+game:
+-responsbilities
+ runs the 'game'
+ gets 'bet'-s from 'player'
+ spins 'wheel'
+ collects losing and pays winning 'bet'-s
+ encapsulates basic sequence of play into single class
+-collaborators
+ uses 'wheel','table','outcome','player'
+ overall statistical analysis will play finite number of games
+ collect final value of 'player' stake
+
