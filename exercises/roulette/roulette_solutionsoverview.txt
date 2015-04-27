@@ -1,0 +1,40 @@
+
+Walkthrough
+-----------
+possible design that will refine definitions, reasonable architecture
+-with questions on preliminary design
+
+Preliminary survey of classes
+-----------------------------
+identify objects and their responsbilities (encapsulation)
+-isolate information/processing
+-methods of class are exclusive to users of fields of the class
+-loosely coupled class (easier change w/o affecting rest of application)
+future enhancements
+-ex: house 'rake': (viforish, vig, commission) % deduction from payouts
+
+Class model (unified modeling language [UML])
+-----------
+describe relationships among various nouns (in problem statement)
+
+Nouns
+~~~~~
+wheel
+bet
+bin
+table
+red
+black
+green
+number
+odds
+player
+house
+
+Preliminary roulette class structure
+------------------------------------
+summarize classes and responsbilities identified from problem statement
+-leave room for addt'l classes and rework
+
+'uses-used by' collaborative relationships
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
