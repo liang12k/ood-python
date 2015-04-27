@@ -69,4 +69,19 @@ recoup losses by waiting for four wins in a row
 -each win advances through sequence: 1w -> 3w -> 2w -> 6w (reset after 6w)
 
 Cancellation (Labouchere) System: betting budget allocated as series of numbers
+-general sequence is 1-9
+-each bet is sum of first and last:
+ win cancels out first,last numbers (all numbers cleared, reset)
+ loss adds the sum of first+last numbers onto end of sequence
+-ex: cancellation bet of 1-9 sequence
+ 1+9 : win leaves 2,3,4,5,6,7,8
+ 2+8 : loss adds  2,3,4,5,6,7,8,10
+ 2+10: loss adds  2,3,4,5,6,7,8,10,12
+ 2+12: win leaves 3,4,5,6,7,8,10
+ 3+10: ....
 
+Fibonacci + Cancellation approach:
+1,1,2,3,5,8,13,21,... sequence
+each loss sums previous two bets to create new bet (next number)
+-easier for tracking losses
+f(n)=f(n-1)+f(n-2)
