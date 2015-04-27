@@ -87,3 +87,8 @@ game:
  overall statistical analysis will play finite number of games
  collect final value of 'player' stake
 
+Basic processing outline
+++++++++++++++++++++++++
+-see class_responsibility_collaborators.txt
+
+

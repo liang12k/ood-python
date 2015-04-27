@@ -1,0 +1,14 @@
+
+Class-Responsibility-Collaborators (CRC)
+========================================
+review responsibilities to confirm complete play cycle
+-gives design details for each class
+-insight (review) classes that may be missing
+
+approach
+~~~~~~~~
+1. identify areas of responsibility and allocate to classes of objects
+   -define collaborating objects
+   -determine the thing to do (responsbility); information, result
+2. decomposing big piece of responsibility into smaller peieces
+   -pieces can be assigned to other classes
