@@ -46,4 +46,27 @@ c. even: red/black or two 18-number ranges 1-18 = low, 19-36 = high (1:1)
 
 Odds and payouts
 ~~~~~~~~~~~~~~~~
+http://buildingskills.itmaybeahack.com/book/oodesign-python-2.2/html/roulette/details.html#roul-bg-odds
+:note: exercise will focus on house edge betting high/low, red/black, odd/even (47.4% winning, 50% payout)
+
+Betting strategies
+~~~~~~~~~~~~~~~~~~
+:goal: exploit betting systems for simple OOD
+
+Martingale System: base wagering amount (w), count number of losses initally 0 (c) - each loss doubles the bet
+-any given spin will place amount of 'w x 2^c' on 1:1
+-bet wins, reset c=0 (resetting bet to base amount 'w'); single win recoups all losses
+:note: table limits applied to restrict excessive doubling of bet
+
+Waiting: wait until number of losses have elapsed
+'wait for a favorable state'
+-ex: spin 7 reds, next will likely be a black
+
+1-3-2-6 System: avoid doubling bet at each loss and hitting table limit
+recoup losses by waiting for four wins in a row
+1,3,2,6 sequence are multipliers to use when placing bets after winning
+-each loss resets to 1
+-each win advances through sequence: 1w -> 3w -> 2w -> 6w (reset after 6w)
+
+Cancellation (Labouchere) System: betting budget allocated as series of numbers
 
