@@ -91,4 +91,36 @@ Basic processing outline
 ++++++++++++++++++++++++
 -see class_responsibility_collaborators.txt
 
+class-responsibility
+********************
+goal: get a clear sense of responsbilities+collaborations and overview
+
+:class:Game: 'runs the game'
+
+1. gets 'bet'-s from :class:Player
+
+2. does :class:Player collaborate with :class:Game to place 'bet'-s?
+   :class:Player
+   -has a responsibility to place 'bet'-s
+   -places 'bet'-s on :class:Outcome
+   -:class:Table contains amounts placed on 'bet'-s
+   -collaboration present between :class:Player, :class:Table
+
+3. does :class:Table collaborate with :class:Player to accept 'bet'-s?
+   :class:Table
+   -has a responsibility for amount of the 'bet'
+   -**contains collection of amounts bet on :class:Outcome (amount bet is :class:Bet)
+
+4. does :class:Bet collaborate with :class:Outcome?
+   :class:Bet
+   -responsibility for amount bet on :class:Outcome; pair
+   -bets all kept and collected by :class:Table
+   -created by :class:Player
+
+5. does :class:Wheel collaborate with :class:Outcome?
+   :class:Wheel
+   -gets list of winning :class:Outcome
+   -:class:Game get all :class:Bet from :class:Table
+   -winning, losing results of :class:Outcome
+   -:class:Game notifies :class:Player of win/lose :class:Bet
 
