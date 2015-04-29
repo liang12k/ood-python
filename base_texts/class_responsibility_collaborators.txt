@@ -10,5 +10,37 @@ approach
 1. identify areas of responsibility and allocate to classes of objects
    -define collaborating objects
    -determine the thing to do (responsbility); information, result
+
 2. decomposing big piece of responsibility into smaller peieces
    -pieces can be assigned to other classes
+
+Notes
+~~~~~
+reflection of ignorance
+-unfinished design, room for rework
+-minimal/reduce responsibilities of a class to avoid complications/conflicts
+
+representation
+-data elements efficient types for use
+-organized to reduce changes and redundancy
+
+responsibility
+-encapsulate what's necessary to handle data
+-minimalize dependencies
+
+encapsulation
+-subroutine library: captures+isolates data elements with associated functions
+
+inheritance (subclasses)
+-enhanced subroutine library (w private data): closely-related subroutine libraries; compiler validated
+
+abstract/concrete
+-classes to be open-ended (abstract) w interaction (concrete)
+-ex: :class:Outcome (various types of outcomes) vs :class:Bet (limited set of bets)
+
+small classes
+-OOD partitions responsibilities
+-emergent behavior: object interactions create features
+-smaller elements w divided responsibilities are more flexible + changeable
+-decomposition, isolation; reduction
+
