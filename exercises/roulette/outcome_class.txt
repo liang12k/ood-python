@@ -1,0 +1,17 @@
+
+:class:Outcome - all gambling is based on
+==============
+encapsulates each outcome
+-min. outcomes are 38 numbers, red/black
+-paid odds are int
+-many instances on :class:Table
+-:class:Wheel bins has various outcomes
+-room for addt'l complex payout rules (ex: rake, x:# variations)
+-handle state of game
+
+amount won
+~~~~~~~~~~
+multiplication of amount bet and odds (basic)
+-other cases: 'rake' where house takes 5% of winnings
+-:note: assume it's x:1 payout; denominator is consistently 1
+
