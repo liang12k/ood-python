@@ -124,3 +124,21 @@ goal: get a clear sense of responsbilities+collaborations and overview
    -winning, losing results of :class:Outcome
    -:class:Game notifies :class:Player of win/lose :class:Bet
 
+Questions-Answers
+~~~~~~~~~~~~~~~~~
+:class:Game runs series of steps (player-->table-->bet-->wheel-->outcome)
+-minimal responsibilites to perform a game cycle
+-rework w future addt'l info; application isn't finished
+
+:class:Outcome is a separate class
+-representation: better handle of the type of data stored
+-responsibility: compute odds of win/loss
+-subroutine library: captures,isolates (encapsulates) data w functions (compute win/loss odds)
+
+:class:Outcome vs :class:Bet
+-:class:Outcome is an abstract; wider term for wager,bet,place...
+-:class:Bet is concrete; :class:Player action
+
+small classes
+-partition responsibility
+-emergent behavior: (later on); application behavior result of objects interactions w each other
