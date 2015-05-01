@@ -15,3 +15,27 @@ multiplication of amount bet and odds (basic)
 -other cases: 'rake' where house takes 5% of winnings
 -:note: assume it's x:1 payout; denominator is consistently 1
 
+Design decision - Object identity
+---------------------------------
+design depends on matching :class:Outcome objects
+-test objects for equality
+-:class:Player placing :class:Bet, held by :class:Table
+-:class:Wheel select winning outcomes
+
+equality: :class:Outcome for a bet equal to :class:Outcome contained in wheel spin
+-outcome names: each instance has distinct Outcome.name
+
+more than equal: :class:Outcome collection of objects
+-create sets,maps where hash codes are used
+
+hash code: every object has a hash code
+-unique int (address of obj; summary of bits that make up obj)
+-distinct objects have distinct hash codes (allows for same objs by value with diff hash codes)
+-each individual :class:Outcome object has a distinct hash code (requires 'equal' test)
+
+layers of meaning: three distinct layers of meaning for 'equality' comparing objects
+-attribute equality: __eq__() using == operator
+-hash equality: includes attribute equality; __hash__(self)()
+-identity: references to same object; 'is' comparison, requires single official source of :class:Outcome
+
+
