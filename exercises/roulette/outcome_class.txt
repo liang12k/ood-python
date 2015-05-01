@@ -38,4 +38,19 @@ layers of meaning: three distinct layers of meaning for 'equality' comparing obj
 -hash equality: includes attribute equality; __hash__(self)()
 -identity: references to same object; 'is' comparison, requires single official source of :class:Outcome
 
+Problem
+-------
+implement?: hash equality or object identity
+-goal: pass equality tests
 
+1. object identity:
+   -share same :class:Outcome object throughout application (singleton instance)
+    never create addt'l :class:Outcome objects,instances to prevent confusion
+    DRY (don't repeat yourself) principle
+   -two references to same object will pass any identity test and same hash code
+   -singleton instance:
+    application has once instance of :class:Outcome shared by
+    :class:Wheel, :class:Player, :class:Bets
+
+2. hash equality:
+   -instances of :class:Outcome act like they are same object
