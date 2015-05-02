@@ -54,3 +54,10 @@ implement?: hash equality or object identity
 
 2. hash equality:
    -instances of :class:Outcome act like they are same object
+    same hash value, test true for eqaulity; equal for practical purposes
+   -feed to create addt'l :class:Outcome objects as they behave appropriately
+   -violate DRY principle: include odds when creating an outcome
+
+ensure sharing single instances of :class:Outcome objects
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
