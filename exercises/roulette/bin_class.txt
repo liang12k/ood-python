@@ -1,0 +1,12 @@
+
+Bin class
+=========
+design :class:Bin and examine collection classes
+
+Overview
+--------
+roulette wheel has 38 bins (number,color)
+-each bins defines number closely related winning outcomes
+-:TODO: enumerate each 38 bins of wheel and each winning outcomes
+-:class:Bin define and contain number of :class:Outcome objects
+
