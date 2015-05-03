@@ -54,3 +54,15 @@ return:
 
 Outcome deliverables
 --------------------
+deliverables for exercise
+-:class:Outcome
+-unit test of :class:Outcome
+ three instances of Outcome
+ 1. test same name of hash code
+ 2. test winAmount
+
+Message formatting
+------------------
+ex:
+def __str__(self):
+    return "%s (%d:1)" % (self.name,self.odds)
