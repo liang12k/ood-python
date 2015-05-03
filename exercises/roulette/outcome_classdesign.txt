@@ -1,3 +1,56 @@
 
 :class:Outcome design
 =====================
+contains single outcoem on which a bet can be placed
+ex: Roulette
+    -each wheel has a number of outcomes with bets that will be paid off
+
+Fields
+~~~~~~
+Outcome.name:
+name of outcome (ex: '1','red')
+-provides hash cods and for equality tests
+
+Outcome.odds: 
+payout odds for this outcome
+-most odds states as 1:1,17:1
+
+Constructors
+~~~~~~~~~~~~
+Outcome.__init__(self,name,odds)
+sets instance name and odds from parameter name and odds
+params:
+	name (str) - name of this outcome
+	odds (int) - payout odds of this outcome
+
+Methods
+~~~~~~~
+:note: assmining global instance of each :class:Outcome
+
+Outcome.winAmount(self,amount) -> amount
+multiple Outcome's odds by given amount, return product
+params:
+	amound (number) - amount being bet
+
+Outcome.__eq__(self,other) -> bool
+compare name attributes of self, other
+params:
+	other (Outcome) - another Outcome to compare against
+return:
+	(bool) - True if name matches other name, else False
+
+Outcome.__ne__(self,other) -> bool
+compare name attributes of self, other
+params:
+	other (Outcome) - another Outcome to compare against
+return:
+	(bool) - True if name doesn't match other name
+
+Outcome.__str__(self) -> str
+easy-to-read representation of this outcome
+return:
+	(str) - str of form name (odds:1)
+
+
+Outcome deliverables
+--------------------
