@@ -2,6 +2,8 @@
 Bin class
 =========
 design :class:Bin and examine collection classes
+-collection of individual :class:Outcome objects
+ collection class to contain objects
 
 Overview
 --------
@@ -10,3 +12,23 @@ roulette wheel has 38 bins (number,color)
 -:TODO: enumerate each 38 bins of wheel and each winning outcomes
 -:class:Bin define and contain number of :class:Outcome objects
 
+two bins (0,00) w few outcomes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+top 2 rows combination:
+0:  00-0-1-2-3
+00: 00-0-1-2-3
+
+other 36 bins:
+-stright bet (single Bin)
+-split bet
+-street bet
+-corner bet
+-line bet
+-column
+-dozen
+-even/odd
+-red/black (18 individual bins)
+-high/low
+
+Design decision - choosing a collection
+---------------------------------------
