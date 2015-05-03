@@ -60,4 +60,25 @@ implement?: hash equality or object identity
 
 ensure sharing single instances of :class:Outcome objects
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+implementation options: (select factory approach for centralized :class:Outcome creation)
 
+a. global outcome objects
+   global constants represented in pool of :class:Outcome instances for proper constant values to create bins,bets
+   -defined and remain unchanged
+   global variables for various outcomes; use global objects as needed
+   -undesirable because changes to those variables can have unexpected consequences in large application
+   
+b. outcome factory object
+   factory class for individual :class:Outcome objects
+   -create,save,return reference to object
+   -existing object returned w a reference to it
+   -centralizes pool of global objects into single factory object
+
+c. singleton outcome class
+   singleton class creates,maintains single instance of itself
+   :note: each distinct outcome needs to be a distinct subclass of :class:Outcome; high complexity!
+   -requires class have static 'getInstance()' method
+    reference to one-and-only instance of class
+   -avoid creating global variables
+   -each class definition contains its own private reference to one-and-only object of that class
+   
