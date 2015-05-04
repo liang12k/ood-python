@@ -1,0 +1,26 @@
+
+Collections (python)
+====================
+a. tuple
+   -immutable sequence of objects
+   -elements don't change
+   -allows duplicate in specific order
+
+b. list
+   -mutable sequence
+   -elements can be changed
+
+c. dict
+   -mapping
+   -key-value pair (item)
+
+d. set
+   -mutable set
+   -unique values (no duplicates)
+   -no inherent ordering
+
+e. frozenset
+   -immutable set
+   -unique values (no duplicates)
+   -no inherent ordering
+

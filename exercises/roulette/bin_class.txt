@@ -32,3 +32,10 @@ other 36 bins:
 
 Design decision - choosing a collection
 ---------------------------------------
+ref: see base_texts/selecting_collections.txt
+~~~
+frozenset
+-immutable set
+-unique values (no duplicates)
+-no inherent ordering
+
