@@ -79,7 +79,7 @@ Bin design
 fields
 ~~~~~~
 Bin.outcomes
--frozenset that holds collection of individual :class:Outcome
+-frozenset (immutable) that holds collection of individual :class:Outcome
 
 constructors
 ~~~~~~~~~~~~
@@ -93,4 +93,35 @@ ex
 
 methods
 ~~~~~~~
+Bin.add(self,outcome)
+-adds Outcome object to Bin
+ can be used by a builder to construct all bets in Bin
+ delegate real work to underlying collection
+-frozenset (immutable) constructed using '|' operator creates new frozenset from frozenset or set
+ zero=Outcome('0',35)
+ zerozero=Outcome('00',35)
+ b=frozenset([zero]) # frozenset([<roulette.Oucome object at ...>])
+ map(str,b) # ['0 (35:1)']
+ b|=set([zerozero])
+ map(str,b) # ['0 (35:1)','00 (35:1)']
+ b # frozenset([<roulette.Outcome object at ...>,<roulette.Outcome object at ...>])
+params:
+	outcome (Outcome) - outcome to add to Bin
+
+Bin.__str__(self)
+easy-to-read representation of list of Outcomes in Bin
+-displaying collections using ', ' separators in .join of outcomes
+-implementation: ', '.join(map(str,self.outcome))
+return:
+	(str) - string of form [outcome, outcome, ...]
+
+Bin deliverables
+----------------
+1. :class:Bin
+2. class that performs unit test for :class:Bin
+   -several instances of Outcome
+    a. two instances of :class:Bin; sharing object references
+       -Outcome obj referenced by several Bins
+    b. Bin can be constructed from :class:Outcome
+
 
