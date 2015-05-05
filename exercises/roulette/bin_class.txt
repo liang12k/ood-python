@@ -39,3 +39,31 @@ frozenset
 -unique values (no duplicates)
 -no inherent ordering
 
+Q/A overview
+~~~~~~~~~~~~
+:class:Bin not in overall design
+-more focused in :class:Wheel; 38 bins
+-rework to be done
+
+entire separate class for bins instead of array of 38 individual arrays
+-improve exactness of object model of problem
+-reduce complexity of :class:Wheel
+-collection of :class:Outcome objects from 38 bins in :class:Wheel during :class:Game
+-flexibility in assigning responsibilities later
+-:class:Wheel has random number generator to select winning :class:Bin
+ delegating definitions in classes
+
+overhead on entire :class:Bin
+-no overhead in class definitions
+ run-time results to few simple persistent objects defining the class
+ :note: class instances cause run-time overhead
+-flexibility > instructions delegated to internal object
+
+introducing collections framework not appearing in problem
+-differentiate classes:
+ a. users ~ uncovered during analysis of problem
+ b. developers ~ part of implementation of particular solution
+-collections framework part of (b.), solution
+-problem-orientated classes unique to problem
+
+
