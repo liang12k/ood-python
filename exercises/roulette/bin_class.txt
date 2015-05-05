@@ -66,4 +66,31 @@ introducing collections framework not appearing in problem
 -collections framework part of (b.), solution
 -problem-orientated classes unique to problem
 
+Bin design
+----------
+:class:Bin
+-contains a collection of :class:Outcome
+ winning bets paid for particular bin on roulette :class:Wheel
+-each wheel spin has number of outcomes
+ ex: spin of '1': selects '1' bin, winning outcomes:
+     	     	  '1','Red','Odd','Low','Column 1','Dozen1-12','Split1-2','Split1-4',
+		  'Street1-2-3','Corner1-2-4-5','Five bet','Line1-2-3-4-5-6','00-0-1-2-3','Dozen1'
+
+fields
+~~~~~~
+Bin.outcomes
+-frozenset that holds collection of individual :class:Outcome
+
+constructors
+~~~~~~~~~~~~
+Bin.__init__(self,*outcomes)
+params
+	outcomes: any number of outcomes used to populate Bin initially
+ex
+	five=Outcome('00-0-1-2-3',6)
+	zero=Bin(Outcome('0',35),five) # based on ref to two objs: '0','00-0-1-2-3' Outcome
+	zerozero=Bin(Outcome('00',35),five) # based on ref to two objs: '00','00-0-1-2-3' Outcome
+
+methods
+~~~~~~~
 
