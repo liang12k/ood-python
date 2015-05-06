@@ -1,3 +1,9 @@
 
 :class:Wheel
 ============
+two responsibilities
+1. container for :class:Bin objects, picks one random :class:Bin object
+2. initialize various :class:Bin objects in standard roulette wheel
+
+Container responsibility
+------------------------
