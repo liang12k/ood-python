@@ -7,3 +7,17 @@ two responsibilities
 
 Container responsibility
 ------------------------
+collection: :class:Wheel is 38 :class:Bin objs
+-tuple: winnng Bin obj: selected by random numeric index
+ immutable, sequential collection
+ index for various Bin objs
+ a. 1-Many: Bin-to-Outcomes
+ b. 1-1	  : Outcome-to-Bin
+
+-index values 1-36 become index in respect to their Bin
+ :note: Bin index 1 is only bin containing Outcome('1',35)
+
+problem
+~~~~~~~
+separate indexes for 0,00
+ 
