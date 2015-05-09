@@ -20,4 +20,23 @@ collection: :class:Wheel is 38 :class:Bin objs
 problem
 ~~~~~~~
 separate indexes for 0,00
- 
+-assign Bin obj that has 00 Outcome obj to position 37 (resulting in unique place for all 38 Bin objs)
+
+Random bin selection responsibility
+-----------------------------------
+random number from 0 to 37 to be used as index
+-random module: Random.choice(); random Bin obj from list of Bin objs
+
+testability
+~~~~~~~~~~~
+difficult to test random numbers
+create non-random random number generator
+1. design Wheel to accept random number generator inserted by main program
+   -testing uses non-random generator
+   -real simulation uses proper random generator
+2. create subclass of system-supplied random number generator
+   override few methods required for testing
+
+Constructing a Wheel
+--------------------
+
