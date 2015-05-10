@@ -39,4 +39,16 @@ create non-random random number generator
 
 Constructing a Wheel
 --------------------
+each Bin obj has list of Outcome objs
+-0,00 Bin obj only have two Outcome objs
+-remaining numbers have twelve to fourteen Outcome objs
+-deferred binding:
+ a. binding delayed until name to class is bound is accessed
+    class obj will be available at that time and can be passed to the obj
+    ref: http://code.activestate.com/recipes/577745-lazy-dynamic-binding-on-classes-youll-never-go-bac/
+ b. implementations are pre-bound at compile time, no run-time penalty to look up an implementation in a data structure
+    -as with dynamic binding or using virtual functions
+    ref: http://www.gwtproject.org/doc/latest/DevGuideCodingBasicsDeferred.html#benefits
 
+:class:Wheel design
+~~~~~~~~~~~~~~~~~~~~
