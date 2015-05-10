@@ -51,4 +51,86 @@ each Bin obj has list of Outcome objs
     ref: http://www.gwtproject.org/doc/latest/DevGuideCodingBasicsDeferred.html#benefits
 
 :class:Wheel design
-~~~~~~~~~~~~~~~~~~~~
+-------------------
+Wheel obj contains 38 individual bins on Roulette wheel, plus random number generator
+-can select Bin obj at random, simulating spin of Roulette wheel
+
+Fields
+~~~~~~
+Wheel.bins
+-contains individual Bin instances
+-tuple of 38 elements; can be built with: tuple( Bin() for i in range(38) )
+
+Wheel.rng
+-random number generator to use to select a Bin obj from bins collection
+-testing needs a non-random random number generator in place of system random number generator
+
+Constructors
+~~~~~~~~~~~~
+Wheel.__init__(self,rng)
+creates
+-new wheel with 38 empty Bins objs
+-new random number generator instance
+:note/TODO: rework - doesn't do full initialization of Bin objs
+params:
+	rng (random.Random): 'random' number generator; non-random for testing
+	
+Methods
+~~~~~~~
+Bin.addOutcome(number,outcome)
+adds given Outcome obj to Bin obj with given number
+param:
+	bin (int): bin number, range [0,37] inclusive
+	outcome (Outcome): Outcome obj to add to this Bin
+
+Bin.next() -> Bin
+generates random number between 0 and 37 and returns randomly selected Bin
+random.Random.choice() will select one of available Bin objs from bins list
+return:
+	(Bin): Bin selected at random from wheel
+
+Bin.get(bin) -> Bin
+params:
+	bin (int): bin number, range [0,37] inclusive
+return:
+	(Bin): requested Bin
+
+Non-Random design (testing)
+---------------------------
+controlled kind of random number generation for testing purposes
+define NonRandom class extends random.Random
+-provides more testable sequence of values (ex: return given int value)
+
+Fields
+~~~~~~
+NonRandom.values
+non-random value to return
+
+Constructors
+~~~~~~~~~~~~
+NonRandom.__init__(self)
+creates non-random 'random' number generator
+
+Methods
+~~~~~~~
+NonRandom.setSeed(self,value)
+saves value as next value to return
+param:
+	value (long): value to return next
+
+NoneRandom.choice(self,sequence):
+use given seed value as an index, return requested item from sequence
+param:
+	sequence (iterable?): sequence of values from which a random value is selected
+
+Wheel deliverables
+------------------
+three deliverables and docstrings for unit test and new class
+1. :class:Wheel
+2. unit test class for :class:Wheel
+   establish Bin objs can be added to :class:Wheel
+   -create several instances of Outcome
+   -two instances of Bin
+   -:class:Wheel instance
+3. NonRandom Random Number Generator class for testing
+4. class which tests Wheel and NonRandom class by selecting values from Wheel obj
