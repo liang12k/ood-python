@@ -1,0 +1,10 @@
+
+Bin builder class
+=================
+overview: numerous design considerations for :class:Outcome, :class:Bin, :class:Wheel
+	  high-level algorithms to group Outcome objs based on geometry of table
+
+Bin builder overview
+--------------------
+enumerating each Outcome obj in 38 Bins objs
+-most Bin objs contains fourteen individual Outcome objs
