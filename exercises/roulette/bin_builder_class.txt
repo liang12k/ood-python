@@ -8,3 +8,8 @@ Bin builder overview
 --------------------
 enumerating each Outcome obj in 38 Bins objs
 -most Bin objs contains fourteen individual Outcome objs
+
+Builder class (design pattern)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+class used to build instance of another class
+-design obj that builds various Bin objs and assigns to :class:Wheel
