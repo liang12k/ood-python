@@ -1,6 +1,7 @@
 
 Bin builder class
 =================
+:class:BinBuilder
 overview: numerous design considerations for :class:Outcome, :class:Bin, :class:Wheel
 	  high-level algorithms to group Outcome objs based on geometry of table
 
@@ -13,3 +14,16 @@ Builder class (design pattern)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 class used to build instance of another class
 -design obj that builds various Bin objs and assigns to :class:Wheel
+method that enumerates contents of each of 36 number Bin objs, building individual Outcome instances
+assign Outcome objs to Bin objs of Wheel instance
+use number of steps to create various Outcome types
+depend of :class:Wheel to assign each Outcome obj to correct Bin obj
+
+Roulette outcomes
+~~~~~~~~~~~~~~~~~
+geometric rules for determining various Outcome objs
+-survey table geometry then develop specific algorithms for each kind of bet
+-combinations of individual numbers
+-rules apply to number from [1,36] inclusive
+-different,simpler set of rules for 0,00
+

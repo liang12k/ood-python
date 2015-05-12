@@ -1,0 +1,50 @@
+
+:class:Wheel
+============
+two responsibilities
+1. container for :class:Bin objects, picks one random :class:Bin object
+2. initialize various :class:Bin objects in standard roulette wheel
+
+Container responsibility
+------------------------
+collection: :class:Wheel is 38 :class:Bin objs
+-tuple: winnng Bin obj: selected by random numeric index
+ immutable, sequential collection
+ index for various Bin objs
+ a. 1-Many: Bin-to-Outcomes
+ b. 1-1	  : Outcome-to-Bin
+
+-index values 1-36 become index in respect to their Bin
+ :note: Bin index 1 is only bin containing Outcome('1',35)
+
+problem
+~~~~~~~
+separate indexes for 0,00
+-assign Bin obj that has 00 Outcome obj to position 37 (resulting in unique place for all 38 Bin objs)
+
+Random bin selection responsibility
+-----------------------------------
+random number from 0 to 37 to be used as index
+-random module: Random.choice(); random Bin obj from list of Bin objs
+
+testability
+~~~~~~~~~~~
+difficult to test random numbers
+create non-random random number generator
+1. design Wheel to accept random number generator inserted by main program
+   -testing uses non-random generator
+   -real simulation uses proper random generator
+2. create subclass of system-supplied random number generator
+   override few methods required for testing
+
+Constructing a Wheel
+--------------------
+each Bin obj has list of Outcome objs
+-0,00 Bin obj only have two Outcome objs
+-remaining numbers have twelve to fourteen Outcome objs
+-deferred binding:
+ a. binding delayed until name to class is bound is accessed
+    class obj will be available at that time and can be passed to the obj
+    ref: http://code.activestate.com/recipes/577745-lazy-dynamic-binding-on-classes-youll-never-go-bac/
+ b.
+    ref: implementations are pre-bound at compile time, there is no run-time penalty to look up an implementation in a data structure as with dynamic binding or using virtual functions
