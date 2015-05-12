@@ -27,3 +27,57 @@ geometric rules for determining various Outcome objs
 -rules apply to number from [1,36] inclusive
 -different,simpler set of rules for 0,00
 
+a. split bets
+   each number adjacent to two, three, or four other numbers
+   four corners (1,3,34,36) only participate in two split bets
+   center col numbers (5,8,11...32) each participate in four split bets
+   remaining 'edge' numbers participate in three split bets
+   bulk of layout (4 to 32) can be handled with simple rule to distinguish center vs edge cols
+   :note: ends (1,2,3,34,35,36) are more complex
+
+b. street bets
+   each number is a member of one of twelve street bets
+
+c. corner bets
+   each number is a member of one, two, or four corner bets
+   bulk of layout can be handled with rule to distinguish the col (like split bets)
+   number in center col (5,8,11,...32) is a member of four corners
+   ends (1,3,34,36) are members of one corner
+   remaining numbers are along an edge and are memebers of two corners
+
+d. line bets
+   six numbers comprise a line
+   each number is a member of one or two lines
+   ends (1,2,3,34,35,36) are each part of a single line
+   remaining 10 rows are each part of two lines
+
+e. dozen bets
+   each number is a member of one of three dozens
+   three ranges are inclusive from [1,12],[13,24],[25,36]
+   easy to associate numbers and ranges
+
+f. column bets
+   each number is a member of one of three cols
+   each col has number numeric relationship
+   values are: 3c+1, 3c+2, 3c+3 (0<=c<=12)
+
+g. even-money bets
+   include red/black, even/odd, high/low
+   each number has three of six possible even money Outcome objs
+   handling these six individual Outcome instances
+   -each number 'n', individual if-statements can be used to determine which of the
+    Outcome objs are associated w given Bin obj
+
+Notes
++++++
+1. Bin objs for 0,00 can be easily enumerated
+2. each bin has straigh number bet Outcome obj & five Bet Outcome objs (00-0-1-2-3; pays 6:1)
+3. easy,understandable names for various kinds of odds
+   -define Outcome as Outcome('Number 1',35) too opaque
+   -better naming Outcome('Number 1',RouletteGame.StraighBet); specific to a game
+
+Bin Builder algorithms
+----------------------
+algorithms for nine kinds of bets
+
+
