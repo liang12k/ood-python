@@ -80,4 +80,17 @@ Bin Builder algorithms
 ----------------------
 algorithms for nine kinds of bets
 
+1. straight bets
+   for all numbers 1<=n<=37:
+       a. create Outcome obj from number n (odds 35:1)
+       b. assign Outcome obj to Bin obj 'n'
+   zero
+       Outcome obj from '0' (odds 35:1)
+       -assign to Bin obj '0'
+   double zero
+       create outcome obj from '00' (odds 35:1)
+       -assign to Bin obj '37'
 
+2. split bets
+   various cases: corners, edges, down-the-middle
+   
