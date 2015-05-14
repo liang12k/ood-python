@@ -108,4 +108,12 @@ algorithms for nine kinds of bets
    f. assign to bins: associate obj to two Bin objs ('n' and 'n+1')
    
 3. street bets
+   generate street bets by iterating through twelve rows of layout
+   for all rows 'r': 0 <= r <= 12
+   a. first column number: set n <- 3r+1; create values 1,4,7,...,34
+   b. street: create 'n, n+1, n+2' street Outcome obj (odds 11:1)
+   c. assign to bins: associate this object to three Bin objs ('n','n+1','n+2')
+
+4. corner bets
+   various cases (corners, edges, down-the-middle)
    
