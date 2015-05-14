@@ -81,7 +81,7 @@ Bin Builder algorithms
 algorithms for nine kinds of bets
 
 1. straight bets
-   for all numbers 1<=n<=37:
+   for all numbers 'n' where 1 <= n <= 37:
        a. create Outcome obj from number n (odds 35:1)
        b. assign Outcome obj to Bin obj 'n'
    zero
@@ -93,4 +93,19 @@ algorithms for nine kinds of bets
 
 2. split bets
    various cases: corners, edges, down-the-middle
+   a. left-right pairs: the form of ( n, n+1 ); 1,4,7,...34 & 2,5,8,...35
+   b. up-down pairs:	the form of ( n, n+3 ); 
+
+   :note: same procedure below for up-down split bets (numbers 1 through 33)
+   	  for each number 'n', generate 'n,n+3' split bet
+	  -Outcome obj belongs to two Bin objs ('n' and 'n+3')
+   all rows 'r' where 0 <= r <= 12
+   a. first col number: set n <- 3r+1 (values 1,4,7,...,34)
+   b. col 1-2 split: create 'n,n+1' split Outcome (odds 14:1)
+   c. assign to bins: associate obj with two Bin objs ('n' and 'n+1')
+   d. second col number: set n <- 3r+2 (values 2,5,8,...,35)
+   e. col 2-3 split: create 'n,n+1' split Outcome obj
+   f. assign to bins: associate obj to two Bin objs ('n' and 'n+1')
+   
+3. street bets
    
