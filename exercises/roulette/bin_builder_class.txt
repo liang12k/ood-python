@@ -116,4 +116,22 @@ algorithms for nine kinds of bets
 
 4. corner bets
    various cases (corners, edges, down-the-middle)
+   each corner has four numbers (n, n+1, n+3, n+4); two numbers in same row and next higher row
+   generate corner bets by iterating through numbers 1,4,7,...,31 and 2,5,8,...,32
+   -each number 'n', generate four corner bets 'n, n+1, n+2, n+4' corner bet
+   -Outcome obj belongs to four Bin objs
+   -iterate through various corners based on rows,cols
+   -room for two corners within three cols of layout
+    one corner starts at col 1, other corner starts at col 2
+   -eleven corners within twelve rows of layout
+
+   for all lines between rows 'r': 0 <= r < 11
+   a. first col number: set r <- 3r+1 (creates values 1,4,7,...,31)
+   b. col 1-2 corner: create 'n, n+1, n+3, n+4' corner Outcome obj (odds 8:1)
+   c. assign to bins: associate obj to four Bin objs (n, n+1, n+3, n+4)
+   d. second col number: set n <- 3r+2 (creates values 2,5,8,...,32)
+   e. col 2-3 corner: create 'n, n+1, n+3, n+4' corner Outcome obj (odds 8:1)
+   f. assign to bins: associate obj to four Bin objs (n, n+1, n+3, n+4)
+
+5. line bets
    
