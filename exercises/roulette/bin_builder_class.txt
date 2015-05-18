@@ -204,6 +204,32 @@ BinBuilder deliverables
 3. rework unit test of Wheel class (create and initialize a Wheel obj)
    -use Wheel.getBin() method to check select Bin objs for correct Outcome objs
 
-Internationalization and Location
----------------------------------
+Internationalization and Localization
+-------------------------------------
+avoid hard coding names of bets
+localization (l10n) of programs
+-use unicode strings; support non-Latin chars, handling internalization (i18n) process
+
+python localization depends on 'locale','gettext' modules
+a. locale module:  provides number of functions,constants to help format dates,times
+b. gettext module: getting translated text from message catalog with messages in language varieties
+
+l10n issue:
+a. isolate all Strings used for messages
+b. format all dates,numbers with formatters in locale module
+
+ex:
+# Outcome obj names displayed and isolated
+blackBetName = _("Black") # fetch strings from gettest message catalog
+
+# set up easy localization of application program
+import gettext
+gettext.NullTranslations().install()
+print _("String to be translated")
+
+1. construct NullTransformation instance
+   installed as a function named '_()'; finds translation for default C-locale string
+   -can be replaced with GNUTranslations class
+    uses a message catalog to replace default strings with localized strings
+2. shows how to use '_()' function to translate default C-locale string to localized string
 
