@@ -182,3 +182,28 @@ create Outcome objs for all 38 individual Bin obj on Roulette wheel
 
 Constructors
 ~~~~~~~~~~~~
+BinBuilder.__init__(self)
+initializes BinBuilder
+
+Methods
+~~~~~~~
+:note: separate methods to generate bets (see BinBuilder Algorithms):
+       straight, split, street, corner, line, dozen, column, money, 0-&-00
+
+BinBuilder.buildBins(self,wheel)
+creates Outcome instance and uses the addOutcome() method to place each
+Outcome obj in appropriate Bin obj of Wheel obj
+
+params:
+	wheel (Wheel): Wheel with bins that must be populated with Outcomes
+
+BinBuilder deliverables
+-----------------------
+1. BinBuilder class
+2. unit test class of BinBuilder class (invoke each methods Outcome instances create)
+3. rework unit test of Wheel class (create and initialize a Wheel obj)
+   -use Wheel.getBin() method to check select Bin objs for correct Outcome objs
+
+Internationalization and Location
+---------------------------------
+
