@@ -13,3 +13,20 @@ a. amount
 b. Outcome
 c. specific Player
 -- three getters,setters for three attributes
+
+general scenario:
+1. have Player construct number of Bet instances
+2. wheel spun to select winning Bin
+3. each Bet objs will be checked to see if they're winners/losers
+   a. winning bet: Outcome matches one in winning Bin
+      	      	   return money to Player
+   b. losing bet:  remove money from Player	   
+
+Locating outcomes
+~~~~~~~~~~~~~~~~~
+design decision to make -?-
+a. create fresh Outcome obj with each Bet
+b. locate existing Outcome obj
+
+Design decision - create or locate an Outcome
+---------------------------------------------
