@@ -1,0 +1,15 @@
+
+:class:Bet
+==========
+overview
+--------
+Bet is an amount the player has wagered on specific Outcome
+
+record declaration
+~~~~~~~~~~~~~~~~~~
+passive association among data elements
+this class has responsibility for maintaining association between:
+a. amount
+b. Outcome
+c. specific Player
+-- three getters,setters for three attributes
