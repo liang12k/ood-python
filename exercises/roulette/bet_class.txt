@@ -30,3 +30,28 @@ b. locate existing Outcome obj
 
 Design decision - create or locate an Outcome
 ---------------------------------------------
+building a bet requires: Outcome, amount
+
+problem:
+~~~~~~~~
+a. create Outcome obj with a Bet?
+b. locate Oucome obj in some collection or as a variable?
+
+forces:
+~~~~~~~
+create Outcome obj as part of constructing a Bet obj
+-violating DRY principle:
+ ex:
+	my_bet = Bet( Outcome("red",2), 25 )
+
+locate an existing Outcome obj as part of creating a Bet instance
+ex:
+	my_bet = Bet( someSource["red"], 25 )
+
+Solution
+~~~~~~~~
+get a complete Outcome from just name of outcome
+-prevents repeating odds information
+
+Consequence
+~~~~~~~~~~~
