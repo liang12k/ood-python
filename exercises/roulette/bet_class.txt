@@ -55,3 +55,11 @@ get a complete Outcome from just name of outcome
 
 Consequence
 ~~~~~~~~~~~
+a. pick a collection
+   map name to complete Outcome instance; associate Bet with Outcome from name of Outcome
+b. some obj needs to build collection of distinct Outcome objs
+c. some obj needs to maintain collection of Outcom objs for Player in building Bets
+:note: builder & maintainer as same obj == responsibilities in single place
+
+Design decision - where to keep Outcome map
+-------------------------------------------
