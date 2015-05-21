@@ -88,4 +88,10 @@ c. :class:Outcome:
    -gets reference to one-and-only Outcome instance
    :note: limits ability to create Outcome subclasses
 
+:class:BinBuilder - Factory design for Outcome instances
+-no mapping to look up Outcome obj based on outcome name
+
+Alternative solutions
+~~~~~~~~~~~~~~~~~~~~~
+a. 
 
