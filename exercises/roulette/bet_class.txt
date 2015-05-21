@@ -63,3 +63,29 @@ c. some obj needs to maintain collection of Outcom objs for Player in building B
 
 Design decision - where to keep Outcome map
 -------------------------------------------
+Bet obj involves: Outcome, amount
+-get an outcome from other obj containing Outcome map
+
+Problem
+~~~~~~~
+what class contains mapping from name to Outcome obj for reusing reference to objs?
+
+Forces
+~~~~~~
+:class:Outcome has three ways to get single Outcome instance
+-multiple references to single Outcome instance
+
+a. Global Outcome Mapping:
+   :note: not a global variable
+   global mapping obj to keep references to Outcome objs
+   immutable obj once initial set of Outcome objs have been built
+b. Outcome Factory Object:
+   produces references to Outcome objs as needed
+   this obj uses reference to one-and-only Outcome instance
+c. :class:Outcome:
+   define Outcome class to retain static mapping to each Outcome created
+   static Outcome.getInstance() method
+   -gets reference to one-and-only Outcome instance
+   :note: limits ability to create Outcome subclasses
+
+
