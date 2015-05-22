@@ -93,5 +93,33 @@ c. :class:Outcome:
 
 Alternative solutions
 ~~~~~~~~~~~~~~~~~~~~~
-a. 
+a. :class:BinBuilder can create mapping from name to each distinct Outcome obj
+   1. keep simple map of various Outcome objs assigned via Wheel.add() method
+   2. specific Outcome getters to :class:BinBuilder
+      ex: getOucome() method that returns Outcome obj based on its name
+      	  class BinBuilder(object):
+	      def apply(self,outcome,bin,wheel):
+	          self.all_outcomes.add(outcome)
+		  wheel.add(bin,outcome)
 
+	      def getOutcome(self,name):
+	          ....
+
+b. access :class:Wheel, get Outcome obj from :class:Wheel
+   1. expand :class:Wheel to keep map of various Outcome objs created by :class:BinBuilder
+      -map would be maintained by Wheel.add()
+   2. add specific Outcome getters to :class:Wheel
+      ex: getOutcome() method that returns an Outcome obj based on its name
+      	  class Wheel(object):
+	      def add(self,bin,outcome):
+	          self.add_outcomes.add(outcome)
+		  ....
+
+              def getOutcome(self,name):
+	          return set([
+		      oc for oc in self.all_outcomes
+		      if oc.name.lower().contains(name.lower()
+		  )])
+
+Solution
+--------
