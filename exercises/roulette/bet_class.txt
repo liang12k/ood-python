@@ -123,3 +123,11 @@ b. access :class:Wheel, get Outcome obj from :class:Wheel
 
 Solution
 --------
+which allocation more clearly states intention?
+1. :class:Wheel is a first-class part of Roulette game (inital noun analysis)
+   -augment to keep track of individual Outcome objs by name
+2. :class:BinBuilder implementation convenience to separate one-time construction
+   of Bin obj from overall work of :class:Wheel
+
+Roulette Bet Questions and Answers
+==================================
