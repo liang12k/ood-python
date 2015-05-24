@@ -131,3 +131,6 @@ which allocation more clearly states intention?
 
 Roulette Bet Questions and Answers
 ==================================
+update each Outcome obj with amount of bet
+-isolating static defintion of :class:Outcome from presence/absence of amount wagered
+ 
