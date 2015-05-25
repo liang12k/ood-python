@@ -194,3 +194,9 @@ return:
 	
 Roulette Bet Deliverables
 =========================
+a. expanded :class:Wheel creates mapping to :class:Outcome
+b. expanded unit tests of :class:Wheel confirming correct mappings created
+c. :class:Bet and unit test
+   -create couple of Outcome instances
+   -establish winAmount(), loseAmount() methods work correctly
+d. usual python docstrings   
