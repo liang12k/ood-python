@@ -152,4 +152,45 @@ individual bet has unique identity/anonymous money
 
 Roulette Bet Design
 ===================
+:class:Bet
+Bet associates amount and Outcome obj
+-rework: associate Bet obj with Player obj
+ :note: omit :class:Player; rework class to add this capability
+ 
+Fields
+~~~~~~
+Bet.amountBet
+amount of bet
 
+Bet.outcome
+Outcome obj which bet is placed
+
+Constructors
+~~~~~~~~~~~~
+Bet.__init__(self,amount,outcome)
+params:
+	amount (int): bet amount
+	outcome (Outcome): Outcome obj betting on
+
+Methods
+~~~~~~~
+Bet.winAmount(self) -> int
+uses Outcome obj's winAmount to compute amount won; given this bet amount
+-amount bet must be added in
+ 1:1 outcome (e.g.: bet on Red) pays amount bet plus amount won
+
+return:
+	(int): amount won
+
+Bet.loseAmount(self) -> int
+return:
+	(int): amount lost
+
+Bet.__str__(self) -> str
+:note: will delegate much of work to :class:Outcome __str__() method
+
+return:
+	(str): str representation of this bet
+	
+Roulette Bet Deliverables
+=========================
