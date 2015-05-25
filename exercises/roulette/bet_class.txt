@@ -133,4 +133,23 @@ Roulette Bet Questions and Answers
 ==================================
 update each Outcome obj with amount of bet
 -isolating static defintion of :class:Outcome from presence/absence of amount wagered
- 
+ :note: :class:Outcome shared by:
+ 	wheel's Bin objs
+ 	available betting spaces on :class:Table; perhaps even :class:Player
+	if multiple Player objs, need to distinguish bets placed by individual players
+-changing field's value indicates thing has changed state
+ in Roulette, no state change definition in an Outcome obj
+ :note: Craps, game's state changes enable/disable whole sets of Outcome objs
+
+individual bet has unique identity/anonymous money
+-money is anonymous; chips look alike in casino
+ placement of bet has unique identity
+ Bet obj is owned by a particular player for specific duration; final outcome of won/lost
+ summary statistics - save individual Bet objs
+ >update each Bet obj with won/lost indicator
+  total wins and losses
+-Bet obj: changes state - placed bet can change to won or lost bet
+
+Roulette Bet Design
+===================
+
