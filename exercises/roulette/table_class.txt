@@ -1,0 +1,25 @@
+
+Roulette Table class
+====================
+:class:Table design to hold bets
+-introducing concepts behind exception handling, proper exception roles
+
+Table overview
+--------------
+:class:Table has responsibility to keep Bet objs created by Player obj
+-all information to evaluation conditions:
+ house imposes 'table limits' on minimum/maximium amount that can be bet
+-:note: betting constraints
+	casinos preving 'Martingale' betting system by imposing table min & limit on each game
+	usual maximum is a multiplier of minimum bet (10 to 50)
+	ex: $5 min has $200 limit; $10 min has $300 limit
+-money placed on Bet objs on :class:Table is 'at risk' of being lost
+ (unclear where responsibility lies for determining winning/losing bets)
+-winning bet:
+ house pays Player obj an amount based on Outcome obj's odds & Bet amount
+-losing bet:
+ Player obj forfeits Bet amount
+
+Winning vs Losing
+~~~~~~~~~~~~~~~~~
+
