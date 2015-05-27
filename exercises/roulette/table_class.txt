@@ -26,4 +26,11 @@ timing of payment for bet from player's stake
 payment to casino happens when bet is placed on table
 deduct money as part of :class:Bet creation; deduct money as part of resolving wheel spin
 limit player bet to their stake - deduct payment as Bet obj is created
+:note:
+      change to :class:Bet, :class:Player
+      -don't need to compute amount lost
+      -deduct money from Player obj's stake as part of creating Bet obj, not when Bet is resolved
+
+Container implementation
+~~~~~~~~~~~~~~~~~~~~~~~~
 
