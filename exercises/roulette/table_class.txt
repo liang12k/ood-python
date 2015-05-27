@@ -33,4 +33,10 @@ limit player bet to their stake - deduct payment as Bet obj is created
 
 Container implementation
 ~~~~~~~~~~~~~~~~~~~~~~~~
+:class:Table is a collection of Bet objs (need to select a concrete class)
+-bets placed in no particular order and arbitrary resolution
+-bets don' have specific names
+-python list allows bet varieties
 
+Table limits
+++++++++++++
