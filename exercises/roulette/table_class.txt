@@ -40,3 +40,17 @@ Container implementation
 
 Table limits
 ++++++++++++
+checked using public method isValid()
+-compares total of new prospective amount plus all existing Bet objs to table limit
+ used by Player obj to evaluate potential bet prior to creating it
+-illegal Bet obj by Player
+ raise exception to indicate design error (handle this in unit testing)
+ subclass of Exception: enough info to debug problem with Player obj's illegal bet
+-check overall state of Player obj's Bet objs
+ ensure table minimum is met (exception thrown otherwise)
+ handle case where Player obj doesn't place a Bet doesn't hit table min check
+
+Bet resolution
+++++++++++++++
+
+ 
