@@ -52,5 +52,9 @@ checked using public method isValid()
 
 Bet resolution
 ++++++++++++++
-
- 
+important to consider collaboration between :class:Table and game class to resolve bets
+-:class:Table has collection of Bet objs, each of which has specific Outcome obj
+-:class:Wheel selects a Bin obj, which has a collection of Outcome objs
+ all bets with winning outcome will be resolved as a winner
+-multiple Outcome objs in winning Bin obj
+ matched against multiple Bet objs active on :class:Table
