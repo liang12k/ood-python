@@ -77,3 +77,52 @@ exception InvalidBet
 
 Roulette Table design
 =====================
+:class:Table
+contains all Bet objs created by Player obj
+-there exists a table betting limit
+-sum of all Player objs bets <= table limit
+-assume simple Player obj in simulation
+
+Fields
+------
+Table.limit
+table limit; sum of Player objs bets <= this .limit
+
+Table.bets
+list of currently active Bet objs; results in either win/loss for Player obj
+
+Constructors
+------------
+Table.Table()
+create empty list of bets
+
+Methods
+-------
+Table.isValid(self,bet) -> bool
+validates this bet; True if sum(all bets) <= limit else False
+Params
+	bet (Bet): Bet instance to be validated
+
+Table.placeBet(self,bet)
+adds this bet to list of working bets; exception thrown using .isValid check
+Params
+	bet (Bet): bet instance to be validated
+	raises: InvalidBet
+
+Table.__iter__() -> iter
+returns iterator over available list of Bet instances
+:note: need ability to remove Bet objs from table and update list by creating copy of list (bets[:])
+
+       returns: iterator over all bets
+
+Table.__str__() -> str
+return str repr of all current bets
+
+Roulette Table deliverables
+===========================
+1. InvalidBet exception class (subclass of exception)
+   no unique programming; no need for unit test
+2. :class:Table
+3. class to perform unit test of :class:Table
+   create at least two instances of Bet objs ensuring Bet objs are correctly managed by :class:Table
+   
