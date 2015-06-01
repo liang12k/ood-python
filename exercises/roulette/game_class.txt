@@ -8,3 +8,14 @@ Roulette :class:Game
        
 Game overview
 -------------
+:class:Game responsibility is to cycle through various steps of game procedure
+-active class that makes use of classes built so far
+ class is longer or more complex methods
+Roulette Game:
+ :note: there are other procedures, this is for roulette
+ -getting bets from player
+ -spinning wheel
+ -resolving bets
+ 
+Single round of roulette
+~~~~~~~~~~~~~~~~~~~~~~~~
