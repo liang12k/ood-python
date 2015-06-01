@@ -1,0 +1,10 @@
+
+Roulette :class:Game
+====================
+:note: chicken-and-egg design problem between :class:Player & :class:Game
+:TODO: deliverables needs :class:Player to be used
+       eg: Passenger57 always bets on Black
+       rework later for sophisticated hierarchy of players
+       
+Game overview
+-------------
