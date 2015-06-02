@@ -19,3 +19,19 @@ Roulette Game:
  
 Single round of roulette
 ~~~~~~~~~~~~~~~~~~~~~~~~
+1. place bets
+   notify Player obj to create Bet objs (placing bets delegated by :class:Player)
+   reduce Player obj's stake (amount) as part of creating Bet
+2. spin wheel
+   get next spin of :class:Wheel
+   winning Bin obj (w); collection of individual :class:Outcome instances of winners
+3. resolve all bets
+   each Bet obj (b), placed by Player obj:
+   a. winner: Bet 'b' Outcome is in winning Bin 'w'
+      	      notify Player obj that Bet 'b' is winner, update Player obj's stake
+   b. loser:  Bet 'b' Outcome is not in winning Bin 'w'
+      	      notify Player obj that Bet 'b' is not a winner, update betting amount for next round
+
+Matching algorithm
+------------------
+   
