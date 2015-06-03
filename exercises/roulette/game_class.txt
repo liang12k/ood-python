@@ -57,4 +57,5 @@ b. driven by Table obj (alternative: visit each Bet obj contained by :class:Tabl
 
 Player interface
 ~~~~~~~~~~~~~~~~
-
+:class:Game collaboratese with :class:Player
+:note:'chicken-and-egg' problem in decomposing relationship between these classes
