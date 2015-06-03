@@ -34,4 +34,27 @@ Single round of roulette
 
 Matching algorithm
 ------------------
-   
+:class:Game has responsibility for matching (Bin & Table)
+a. collection of Outcome objs in Bin obj of :class:Wheel
+b. collection of Outcome objs of Bet objs on :class:Table
+-- loop/nested loops to compare individual elements from these two collections
+
+a. driven by Bin obj
+   loop to visit each Outcome obj in winning Bin obj
+   each Outcome obj visit each of Bet objs contained by :class:Table
+   Bet obj's Outcome that matches Bin obj's Outcome is a winner and paid off
+   other bets are losers
+   :: nested loops
+      a. one to visit winning Outcome objs of Bin obj
+      b. one to visit Bet objs of :class:Table
+
+b. driven by Table obj (alternative: visit each Bet obj contained by :class:Table)
+   winning Bin obj has set of Outcome objs
+   -exploit set membership methods to test for presence/absence of Bet obj's Outcome in winning Bin obj's set
+    if Bin obj contains Oucome, Bin obj is a winner; else a loser
+    :: single loop
+       -visit Bet objs of :class:Table
+
+Player interface
+~~~~~~~~~~~~~~~~
+
