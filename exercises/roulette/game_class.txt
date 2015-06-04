@@ -59,3 +59,13 @@ Player interface
 ~~~~~~~~~~~~~~~~
 :class:Game collaboratese with :class:Player
 :note:'chicken-and-egg' problem in decomposing relationship between these classes
+:class:Player is a complete hierarchy of subclasses
+-each of which provides a different betting strategy (rework: craps, blackjack, etc.)
+develop :class:Game unit tests with a stub for Player obj placing single kind of Bet
+-'Passenger57': always bet on Black
+
+:note: rework tbd for more sophisticated players
+       (opt'l) addt'l roulette considerations for advance designing
+
+Passenger57 design
+------------------
