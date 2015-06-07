@@ -123,4 +123,14 @@ Game manages sequence of actions that define Roulette game
 
 Fields
 ~~~~~~
+wheel
+Wheel obj that returns a randomly selected Bin obj of Outcome objs
 
+table
+Table obj which contains Bet objs placed by Player obj
+
+player
+Player obj which creates Bet objs at Table
+
+Constructors
+~~~~~~~~~~~~
