@@ -97,3 +97,30 @@ Params:
 
 Methods
 ~~~~~~~
+Passenger57.placeBets(self)
+updates Table obj with various bets; places 'black' bet
+-this version creates a Bet instance from 'black' Outcome
+
+Passenger57.win(self,bet)
+notification from :class:Game that the Bet obj was a winner
+-amount of money won is available via .winAmount() method of .theBet
+Params:
+	bet (:class:Bet): bet which won
+
+Passenger57.lose(self,bet)
+notification from :class:Game that the Bet obj was a loser
+Params:
+	bet (:class:Bet): bet which lost
+
+Roulette game design
+--------------------
+:class:Game
+Game manages sequence of actions that define Roulette game
+-includes:
+ a. notifying Player obj to place bets
+ b. spinning :class:Wheel
+ c. resolving Bet objs actually present of :class:Table
+
+Fields
+~~~~~~
+
