@@ -71,3 +71,29 @@ Passenger57 design
 ------------------
 :class:Passenger57
 constructs a Bet obj based on Outcome named 'Black'; persistent player
+-need a source for Black outcome
+ several choices (see :class:Bet)
+ query :class:Wheel for needed Outcome obj
+-rework tbd:
+ a. define :class:Player superclass
+ b. make :class:Passenger57 a subclass of :class:Player
+
+Fields
+~~~~~~
+Passenger57.black
+outcome which player focuses their betting
+-Player obj will get this from :class:Wheel using well-known bet name
+
+Passenger57.table
+Table obj used to place individual Bet objs
+
+Constructors
+~~~~~~~~~~~~
+Passenger57.__init__(self,table)
+constructs Player obj with specific table for placing bets
+-creates 'Black' Outcome
+Params:
+	table (:class:Table): Table instance on which bets are placed
+
+Methods
+~~~~~~~
