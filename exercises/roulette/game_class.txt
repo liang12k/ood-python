@@ -69,3 +69,5 @@ develop :class:Game unit tests with a stub for Player obj placing single kind of
 
 Passenger57 design
 ------------------
+:class:Passenger57
+constructs a Bet obj based on Outcome named 'Black'; persistent player
