@@ -134,3 +134,13 @@ Player obj which creates Bet objs at Table
 
 Constructors
 ~~~~~~~~~~~~
+'Strategy' design pattern:
+-based Roulette Game constructor on a design that allows any of fields to be replaced
+-each of these collaborating objs is a replaceable strategy
+ can be changed by client that uses this game
+
+:note: do not include Player instance in constructor
+-:class:Game exists independently of any particular Player obj
+-defer binding :class:Player and :class:Ga,e until gathering statistical samples
+
+
