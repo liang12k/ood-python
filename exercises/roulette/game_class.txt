@@ -143,4 +143,11 @@ Constructors
 -:class:Game exists independently of any particular Player obj
 -defer binding :class:Player and :class:Ga,e until gathering statistical samples
 
+Game.__init__(self,wheel,table)
+constructs new Game obj, given Wheel obj, Table obj
+Params:
+	wheel (Wheel): wheel which produces random events
+	table (Table): table which holds bets to be resolved
 
+Methods
+~~~~~~~
