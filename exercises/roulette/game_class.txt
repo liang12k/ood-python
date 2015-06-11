@@ -177,4 +177,14 @@ why are :class:Table and :class:Wheel part of the constructor while
  game objs are largely fixed, there will be variations on Player obj
  main program that simplifies inserting a new Player subclass with minimal disruption
 
+why include odds with Outcome obj? (difficult to create Outcome obj from scratch)
 
+-odds are essential in Outcome obj; short-hand name for each Outcome
+ a. variable name: each variable is owned by a specific class instance; allocate to some class
+    	     	   Wheel obj or BinBuilder obj makes most sense for owning this variable
+ b. key in mapping: allocate mapping to some class
+ c. method returning Outcome obj: may use a fixed variable or gets value from mapping
+
+Roulette Game deliverables
+--------------------------
+ 
