@@ -198,3 +198,41 @@ c. class which performs demonstration of :class:Game
 
 Additional Roulette Design considerations
 -----------------------------------------
+European casinos: wheel has a single zero
+Zero outcome: 'en prison' rule
+     	      all losing bets are:
+	      a. split
+	      b. half the money is lost
+	      c. other half is a push and returned to player
+
+payout variation depends on single Outcome obj
+
+need and addt'l subclass of Outcome that has more sophisticated losing amount method
+-push half of amount back to Player obj's stake (:class:PrisonOutcome)
+
+'hybrid resolution': partial loss of the bet
+-loss(),win() method in Bet obj
+ >loss():
+  a. does nothing (money removed from Player obj's stake when bet placed)
+  b. PrisonOutcome loss() returns half the money to Player obj
+
+introduce a subclass of :class:BinBuilder that creates only single zero
+
+EuroBinBuilder: uses PrisonOutcome subclass of :class:Outcome
+		doesn't create five-way Outcome of 00-0-1-2-3
+		creates four-way 0-1-2-3
+ 
+:class:Game adjusted to invoke loss() method of each losing Bet
+-in case it resulted in a push
+
+American-style casino: .loss() method does nothing
+
+European-style casino: .loss() originally does nothing
+	       	       -PrisonOutcome implements addt'l rule pusing half the bet back to Player obj
+		       -special behavior for zero emerges from various classes collaboration
+
+:note: :class:Player not designed yet
+       -keep in mind of 'push rule'
+
+uniform interface between :class:Outcome and PrisonOutcome subclass
+-'polymorphism':design pattern
