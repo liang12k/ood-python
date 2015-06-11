@@ -187,4 +187,14 @@ why include odds with Outcome obj? (difficult to create Outcome obj from scratch
 
 Roulette Game deliverables
 --------------------------
- 
+a. :class:Passenger57 (rework/replaced tbd later)
+   always places bet on Black
+   used to test :class:Game
+b. RouletteGame class
+c. class which performs demonstration of :class:Game
+   demo prgram creates Wheel obj, stub Passenger57 obj, Table obj
+   Game obj created and cycles a few times
+   :note: Wheel obj returns random results (testability issue for making formal test)
+
+Additional Roulette Design considerations
+-----------------------------------------
