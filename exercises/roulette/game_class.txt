@@ -164,4 +164,17 @@ Params:
 
 Roulette game questions and answers
 -----------------------------------
+why are :class:Table and :class:Wheel part of the constructor while
+:class:Player is given as part of the .cycle() method?
+
+-making subtle distinction between the casino table game (Roulette table, wheel, casino staff)
+ and having a player come to table and play the game
+ game exists without any particular player
+ setting up classes to parallel the physical entities
+ >gives flexibility to have multiple players wihtouth significant rewrite
+ allows support of multiple concurrent players,simulations each using different player obj
+-structure of future simulation
+ game objs are largely fixed, there will be variations on Player obj
+ main program that simplifies inserting a new Player subclass with minimal disruption
+
 
