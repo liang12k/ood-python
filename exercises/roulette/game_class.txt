@@ -151,3 +151,17 @@ Params:
 
 Methods
 ~~~~~~~
+cycle(self,player)
+this will execute a single cycle of playe with a given Player obj
+will call Player.placeBets() method to get bets
+will call Wheel.next() method to get next winning Bin obj
+then call Table.__iter__() to get Iterator over Bet objs
+-stepping through Iterator returns individual Bet objs
+ winning Bin objs contains Outcome obj calls Player.win() method
+ losing calls Player.lose() method
+Params:
+	player (Player): the individual player that places bets, receives winnings & pay losses
+
+Roulette game questions and answers
+-----------------------------------
+
